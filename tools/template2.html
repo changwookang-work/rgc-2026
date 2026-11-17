@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#141414">
+<title>RENADOG GLOBAL CONNECT 2026</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(/assets/fonts/poppins-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:500;src:url(/assets/fonts/poppins-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:600;src:url(/assets/fonts/poppins-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:700;src:url(/assets/fonts/poppins-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;src:url(/assets/fonts/instrument-serif-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:normal;src:url(/assets/fonts/instrument-serif-latin-400-normal.woff2) format('woff2')}
+:root{--bg:#141414;--panel:#1F1F1F;--line:rgba(255,255,255,.12);--muted:#A8A8A8;--accent:#EC7969}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:#fff}
+body{font-family:Poppins,'Noto Sans KR','Noto Sans JP','Noto Sans SC','Noto Sans TC','Noto Sans Thai','Apple SD Gothic Neo','Hiragino Sans','PingFang SC','PingFang TC',sans-serif;
+  -webkit-font-smoothing:antialiased;min-height:100vh;
+  background:radial-gradient(120% 70% at 85% 0%,#262626 0%,#141414 60%) fixed}
+.wrap{max-width:560px;margin:0 auto;padding:28px 22px 56px}
+header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:34px}
+.mono{width:40px;height:40px;border:1.4px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font:400 25px/1 'Instrument Serif',serif;padding-top:2px;flex:none}
+.wm{height:13px;width:auto;opacity:.95}
+.eyebrow{font:500 11px Poppins,sans-serif;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+h1{font:600 30px/1.18 Poppins,sans-serif;letter-spacing:-.01em;margin:10px 0 6px}
+h1 em{font:italic 400 36px/1 'Instrument Serif',serif;color:var(--accent);letter-spacing:0}
+.rule{width:44px;height:2px;background:var(--accent);margin:18px 0 22px}
+.multi{color:var(--muted);font-size:13px;line-height:1.7;margin-bottom:24px}
+.langs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lang{display:flex;align-items:center;justify-content:center;min-height:62px;padding:10px;border:1px solid var(--line);
+  background:rgba(255,255,255,.03);color:#fff;font-size:16px;font-weight:500;border-radius:2px;cursor:pointer;text-align:center;
+  transition:border-color .15s,background .15s}
+.lang:active,.lang:hover{border-color:var(--accent);background:rgba(236,121,105,.08)}
+.lang.wide{grid-column:1/-1}
+.date{color:var(--muted);font-size:13px;margin-top:4px}
+.p1{margin:28px 0 6px;font:600 13px Poppins,sans-serif;letter-spacing:.14em;color:var(--accent)}
+.p1sub{color:#D4D4D4;font-size:15px;line-height:1.5;margin-bottom:20px}
+.item{border-top:1px solid var(--line);padding:20px 0 22px}
+.time{font:500 13px Poppins,sans-serif;letter-spacing:.1em;color:var(--muted)}
+.title{font-size:19px;font-weight:600;line-height:1.38;margin:7px 0 6px;word-break:keep-all;overflow-wrap:anywhere}
+.sp{color:#C9C9C9;font-size:14px;line-height:1.5}
+.sp b{font-weight:500;color:#fff}
+.dl{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;padding:15px 18px;background:#fff;color:#141414;
+  text-decoration:none;font-weight:600;font-size:15px;border-radius:2px}
+.dl:active{background:#EDEDED}
+.dl .sz{font-weight:400;font-size:12px;color:#666}
+.dl .arr{font-size:18px;line-height:1}
+.item.muted .title{color:#BDBDBD;font-weight:500;font-size:17px}
+.p2{border-top:1px solid var(--line);padding:22px 0 0;margin-top:2px}
+.p2 .title{font-size:15px;font-weight:500;color:#BDBDBD}
+.foot{margin-top:34px;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--muted);font-size:12px;line-height:1.5}
+.chg{background:none;border:1px solid var(--line);color:#fff;padding:10px 14px;font:500 13px inherit;border-radius:2px;cursor:pointer;white-space:nowrap;font-family:inherit}
+.ty{min-height:80vh;display:flex;flex-direction:column;justify-content:center}
+.ty h1{font-size:28px}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+var D=/*DATA*/;
+var CUTOFF=Date.parse('2026-11-18T19:00:00+09:00');
+var app=document.getElementById('app');
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function head(){return '<header><div class="mono">R</div><img class="wm" src="/assets/wordmark.png" alt="RENADOG GLOBAL CONNECT 2026"></header>'}
+function closed(){
+  document.documentElement.lang='en';
+  app.innerHTML=head()+'<div class="ty"><div class="eyebrow">Renadog Global Connect 2026</div><h1>Thank you for visiting<br><em>Renadog Global Connect</em><br>today.</h1><div class="rule"></div><p class="multi">This page is no longer available.</p></div>';
+}
+function picker(){
+  document.documentElement.lang='en';
+  var h=head()+'<div class="eyebrow">18 Nov 2026 · Part 1 Presentations</div><h1>Choose your <em>language</em></h1><div class="rule"></div>'+
+   '<p class="multi">'+D.order.map(function(c){return esc(D.L[c].ui.choose)}).slice(0,5).join(' · ')+'</p><div class="langs">';
+  D.order.forEach(function(c,i){h+='<button class="lang'+(i==D.order.length-1&&D.order.length%2?' wide':'')+'" data-l="'+c+'">'+esc(D.L[c].name)+'</button>'});
+  app.innerHTML=h+'</div>';
+  app.querySelectorAll('.lang').forEach(function(b){b.onclick=function(){go(b.getAttribute('data-l'))}});
+}
+function go(l){try{localStorage.setItem('rgc_lang',l)}catch(e){} history.pushState({l:l},'','?lang='+l); render(l); window.scrollTo(0,0)}
+function render(l){
+  if(Date.now()>=CUTOFF){closed();return}
+  var L=D.L[l]; if(!L){picker();return}
+  document.documentElement.lang=L.html; var u=L.ui;
+  var h=head()+'<div class="eyebrow">RENADOG GLOBAL CONNECT 2026</div><div class="date">'+esc(u.date)+'</div>'+
+    '<div class="p1">'+esc(u.part1)+'</div><div class="p1sub">'+esc(u.part1sub)+'</div>';
+  D.sessions.forEach(function(s,i){
+    var t=L.s[i], f=s.deck?D.files[s.deck][l]:null;
+    var sp=s.deck==='panel'?('<b>'+esc(u.panel)+'</b> · '+esc(L.panelSp)):(s.sp?'<b>'+esc(s.sp)+'</b>'+(s.org?' · '+esc(s.org):''):'');
+    h+='<div class="item'+(s.deck?'':' muted')+'"><div class="time">'+s.time+'</div><div class="title">'+esc(t)+'</div>'+(sp?'<div class="sp">'+sp+'</div>':'');
+    if(f) h+='<a class="dl" href="'+f.url+'" download><span>'+esc(u.dl)+' <span class="sz">PDF · '+f.mb+' MB</span></span><span class="arr">↓</span></a>';
+    h+='</div>';
+  });
+  h+='<div class="p2"><div class="time">19:30–22:00</div><div class="p1" style="margin-top:6px">'+esc(u.part2)+'</div><div class="title">'+esc(L.s[6])+'</div></div>';
+  h+='<div class="foot"><span>'+esc(u.note)+'</span><button class="chg" id="chg">'+esc(u.change)+'</button></div>';
+  app.innerHTML=h;
+  document.getElementById('chg').onclick=function(){history.pushState({},'','/');picker();window.scrollTo(0,0)};
+}
+function start(){
+  if(Date.now()>=CUTOFF||/[?&]closed=1/.test(location.search)){closed();return}
+  var m=location.search.match(/[?&]lang=([\w-]+)/);
+  if(m&&D.L[m[1]]){render(m[1]);return}
+  picker();
+}
+window.onpopstate=start;
+start();
+setInterval(function(){if(Date.now()>=CUTOFF)closed()},30000);
+</script>
+</body>
+</html>
