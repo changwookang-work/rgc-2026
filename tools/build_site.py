@@ -39,11 +39,25 @@ for l, _, _ in LANGS:
         fx = '/home/claude/rachel/tr/verify_fixes.json'
         if os.path.exists(fx): t.update(json.load(open(fx)).get(l, {}))
         RC_TITLE[l] = t['1'].replace('\n', ' ')
+# Juan Miranda deck: title = slide-1 title from the translation (+ verifier fixes)
+_src = json.load(open('/home/claude/juan/src_es.json'))
+_small = {'the','of','a','de','la','el','y','di','dan','yang'}
+def _tc(t):
+    ws = t.lower().split()
+    return ' '.join(w.capitalize() if (i == 0 or w not in _small) else w for i, w in enumerate(ws))
+JU_TITLE = {}
+for l, _, _ in LANGS:
+    t = dict(_src) if l == 'es' else json.load(open('/home/claude/juan/tr/%s.json' % l))
+    vf = '/home/claude/juan/tr/vf_%s.json' % l
+    if l != 'es' and os.path.exists(vf): t.update(json.load(open(vf)))
+    v = t['s1.title'].replace('\n', ' ')
+    JU_TITLE[l] = _tc(v) if l in ('en', 'es', 'ms') else v
 decks = []
 for key, label, sub, fmt, titles in (
         ('afpet', 'AFpet · Taiwan', 'Jennifer Tzeng', 'downloads/afpet/AFpet_Korea2026_%s.pdf', AF_TITLE),
         ('ipet', 'Shanghai Ipet · China', 'Shanghai Ipet Co., Ltd.', 'downloads/ipet/IPET_KTour_2026_%s.pdf', IP_TITLE),
-        ('rachel', 'Groom Curriculum · USA', 'Rachel Colant', 'downloads/rachel/Rachel_US_Grooming_%s.pdf', RC_TITLE)):
+        ('rachel', 'Groom Curriculum · USA', 'Rachel Colant', 'downloads/rachel/Rachel_US_Grooming_%s.pdf', RC_TITLE),
+        ('juan', 'Miranda PR', 'Juan Miranda', 'downloads/juan/Juan_Miranda_%s.pdf', JU_TITLE)):
     files = {}
     for l, _, _ in LANGS:
         f = fmt % l
