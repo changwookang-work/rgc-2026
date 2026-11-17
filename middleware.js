@@ -4,7 +4,7 @@
 export const config = { matcher: '/:path*' };
 
 const NEW_HOST = 'renadog-global-connect-2026.vercel.app';
-const CUTOFF = Date.parse('2026-11-18T19:00:00+09:00');
+const CUTOFF = Date.parse('2026-11-18T05:00:00+09:00');
 
 const THANK_YOU = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
