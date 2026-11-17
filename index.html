@@ -23,7 +23,8 @@ body{font-family:Poppins,'Noto Sans KR','Noto Sans JP','Noto Sans SC','Noto Sans
 header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:34px}
 .mono{width:40px;height:40px;border:1.4px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;
   font:400 25px/1 'Instrument Serif',serif;padding-top:2px;flex:none}
-.wm{height:13px;width:auto;opacity:.95}
+.wm{display:block;width:100%;max-width:290px;height:auto;min-width:0;opacity:.95}
+header>div{flex:none}
 .eyebrow{font:500 11px Poppins,sans-serif;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
 h1{font:600 30px/1.18 Poppins,sans-serif;letter-spacing:-.01em;margin:10px 0 6px}
 h1 em{font:italic 400 36px/1 'Instrument Serif',serif;color:var(--accent);letter-spacing:0}
@@ -73,7 +74,7 @@ function closed(){
 function picker(){
   document.documentElement.lang='en';
   var h=head()+'<div class="eyebrow">18 Nov 2026 · Part 1 Presentations</div><h1>Choose your <em>language</em></h1><div class="rule"></div>'+
-   '<p class="multi">'+D.order.map(function(c){return esc(D.L[c].ui.choose)}).slice(0,5).join(' · ')+'</p><div class="langs">';
+   '<p class="multi">'+D.order.map(function(c){return D.L[c].ui.choose}).filter(function(v,i,a){return a.indexOf(v)===i}).map(esc).join(' · ')+'</p><div class="langs">';
   D.order.forEach(function(c,i){h+='<button class="lang'+(i==D.order.length-1&&D.order.length%2?' wide':'')+'" data-l="'+c+'">'+esc(D.L[c].name)+'</button>'});
   app.innerHTML=h+'</div>';
   app.querySelectorAll('.lang').forEach(function(b){b.onclick=function(){go(b.getAttribute('data-l'))}});
