@@ -3,7 +3,7 @@
 import json, os
 ROOT = '/home/claude/rgc-2026'
 L = json.load(open(os.path.join(ROOT, 'tools', 'schedule.json'), encoding='utf-8'))
-ORDER = ['ko', 'en', 'zh-CN', 'zh-TW', 'zh-HK', 'ja', 'th', 'ms', 'es']  # 'vi' added once all PDFs exist
+ORDER = ['ko', 'en', 'zh-CN', 'zh-TW', 'zh-HK', 'ja', 'th', 'vi', 'ms', 'es']
 FMT = {
     'ipet': 'downloads/ipet/IPET_KTour_2026_%s.pdf',
     'panel': 'downloads/panel/RGC2026_PanelTalk_%s.pdf',
