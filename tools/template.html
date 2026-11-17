@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RENADOG GLOBAL CONNECT 2026 — Presentations</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --ink:#1b1b1b; --muted:#6b6b6b; --line:#e4e2de; --bg:#f6f5f2; --accent:#e8571f; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin:0; font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Noto Sans KR", "Noto Sans JP", "Noto Sans TC", "Noto Sans SC", "Noto Sans Thai", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+  header { background:#2b2b2b; color:#fff; padding:28px 20px 24px; }
+  header .in { max-width:760px; margin:0 auto; }
+  .brand { font-weight:800; letter-spacing:.14em; font-size:clamp(15px,4.4vw,22px); }
+  .brand span { color:var(--accent); }
+  .bar { height:3px; width:56px; background:var(--accent); margin:14px 0 0; }
+  main { max-width:760px; margin:0 auto; padding:22px 16px 48px; }
+  h1 { font-size:clamp(20px,5.6vw,28px); margin:6px 0 4px; }
+  p.lead { margin:0 0 16px; color:var(--muted); font-size:15px; line-height:1.5; }
+  .langs { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:0 0 22px; }
+  .langs button { font:inherit; font-weight:600; font-size:14px; padding:14px 6px; min-height:56px; border:1.5px solid var(--line); background:#fff; border-radius:12px; cursor:pointer; color:var(--ink); line-height:1.25; }
+  .langs button[aria-pressed="true"] { border-color:var(--accent); background:#fff3ec; color:#b53e0c; box-shadow:0 0 0 2px rgba(232,87,31,.15) inset; }
+  .card { background:#fff; border:1.5px solid var(--line); border-radius:16px; padding:18px 18px 16px; margin:0 0 14px; }
+  .tag { font-size:12px; font-weight:700; letter-spacing:.08em; color:var(--accent); text-transform:uppercase; }
+  .card h2 { font-size:clamp(17px,4.8vw,21px); margin:6px 0 4px; line-height:1.35; }
+  .card .sub { color:var(--muted); font-size:14px; margin:0 0 14px; }
+  a.dl { display:flex; align-items:center; justify-content:center; gap:10px; background:var(--accent); color:#fff; text-decoration:none; font-weight:700; font-size:16px; padding:15px 16px; border-radius:12px; min-height:52px; }
+  a.dl:active { background:#c9480f; }
+  a.dl small { font-weight:500; opacity:.85; }
+  footer { text-align:center; color:var(--muted); font-size:12px; padding:0 16px 32px; }
+</style>
+</head>
+<body>
+<header><div class="in"><div class="brand">RENADOG <span>GLOBAL CONNECT</span> 2026</div><div class="bar"></div></div></header>
+<main>
+  <h1 id="h1"></h1>
+  <p class="lead" id="lead"></p>
+  <div class="langs" id="langs" role="group"></div>
+  <div id="cards"></div>
+</main>
+<footer>© Breezytail · RENADOG GLOBAL CONNECT 2026</footer>
+<script>
+const D = /*DATA*/;
+const $ = id => document.getElementById(id);
+const codes = D.langs.map(l => l.code);
+function detect() {
+  const h = decodeURIComponent(location.hash.replace('#','')); if (codes.includes(h)) return h;
+  for (const n of (navigator.languages || [navigator.language || 'en'])) {
+    const s = n.toLowerCase();
+    if (s.startsWith('ko')) return 'ko'; if (s.startsWith('ja')) return 'ja'; if (s.startsWith('th')) return 'th';
+    if (s.startsWith('ms')) return 'ms'; if (s.startsWith('es')) return 'es';
+    if (s.startsWith('zh')) { if (/hk|yue|mo/.test(s)) return 'zh-HK'; if (/tw|hant/.test(s)) return 'zh-TW'; return 'zh-CN'; }
+    if (s.startsWith('en')) return 'en';
+  }
+  return 'en';
+}
+function render(code) {
+  const ui = D.ui[code]; const meta = D.langs.find(l => l.code === code);
+  document.documentElement.lang = meta.html;
+  $('h1').textContent = ui[0]; $('lead').textContent = ui[1];
+  $('langs').innerHTML = '';
+  D.langs.forEach(l => {
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = l.name; b.lang = l.html;
+    b.setAttribute('aria-pressed', String(l.code === code));
+    b.onclick = () => { history.replaceState(null, '', '#' + l.code); render(l.code); };
+    $('langs').appendChild(b);
+  });
+  $('cards').innerHTML = '';
+  D.decks.forEach(d => {
+    const f = d.files[code] || d.files['en']; if (!f) return;
+    const c = document.createElement('div'); c.className = 'card';
+    c.innerHTML = '<div class="tag"></div><h2></h2><p class="sub"></p><a class="dl" download><span></span><small></small></a>';
+    c.querySelector('.tag').textContent = d.label;
+    c.querySelector('h2').textContent = f.title; c.querySelector('h2').lang = meta.html;
+    c.querySelector('.sub').textContent = d.sub;
+    const a = c.querySelector('a'); a.href = f.url; a.querySelector('span').textContent = ui[2]; a.querySelector('small').textContent = 'PDF · ' + f.mb + ' MB';
+    $('cards').appendChild(c);
+  });
+}
+render(detect());
+</script>
+</body>
+</html>
