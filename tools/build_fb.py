@@ -12,7 +12,7 @@ SESSIONS = [
     {'time': '16:00–17:00', 'deck': 'rachel', 'sp': 'Rachel Colant'},
     {'time': '17:00–18:00', 'deck': 'juan', 'sp': 'Juan Miranda', 'org': 'Miranda PR'},
 ]
-PROG = ['timing_order', 'breaks', 'interpretation', 'downloads', 'venue_sound', 'snacks', 'dinner', 'vip_night']
+PROG = ['timing_breaks', 'interpretation', 'food']
 for l in ORDER:
     assert l in F and l in S, l
     assert len(F[l]['program']) == len(PROG), l

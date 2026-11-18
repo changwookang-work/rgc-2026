@@ -19,14 +19,9 @@
   "comment_ph": "좋았던 점 또는 아쉬웠던 점 (선택)",
   "sec_program": "행사 구성 평가",
   "program": [
-   "전체 진행 시간과 세션 순서",
-   "쉬는 시간 배분",
+   "진행 시간과 쉬는 시간 배분",
    "통역·자막 (AI 통역)",
-   "발표자료 다운로드 (QR 사이트)",
-   "장소·좌석·음향",
-   "스낵",
-   "디너",
-   "2부 VIP NIGHT (DJ 파티·네트워킹)"
+   "식사와 스낵"
   ],
   "sec_overall": "종합",
   "best_q": "가장 좋았던 세션",
@@ -75,14 +70,9 @@
   "comment_ph": "What you liked or what could be better (optional)",
   "sec_program": "Event program",
   "program": [
-   "Overall timing and session order",
-   "Break times",
+   "Timing and break times",
    "Interpretation and subtitles (AI)",
-   "Slide downloads (QR site)",
-   "Venue, seating and sound",
-   "Snacks",
-   "Dinner",
-   "Part 2 VIP NIGHT (DJ party & networking)"
+   "Dinner and snacks"
   ],
   "sec_overall": "Overall",
   "best_q": "Your favourite session",
@@ -131,14 +121,9 @@
   "comment_ph": "满意或不足之处（选填）",
   "sec_program": "活动安排评价",
   "program": [
-   "整体时长与场次顺序",
-   "休息时间安排",
-   "翻译与字幕（AI翻译）",
-   "演讲资料下载（QR网站）",
-   "场地、座位与音响",
-   "点心",
-   "晚宴",
-   "第二部分 VIP NIGHT（DJ派对与社交）"
+   "活动时间与休息安排",
+   "翻译与字幕（AI）",
+   "晚餐与茶点"
   ],
   "sec_overall": "总体评价",
   "best_q": "最喜欢的场次",
@@ -187,14 +172,9 @@
   "comment_ph": "滿意或不足之處（選填）",
   "sec_program": "活動安排評價",
   "program": [
-   "整體時間與場次順序",
-   "休息時間安排",
-   "口譯與字幕（AI口譯）",
-   "簡報資料下載（QR網站）",
-   "場地、座位與音響",
-   "點心",
-   "晚宴",
-   "第二部 VIP NIGHT（DJ派對與交流）"
+   "活動時間與休息安排",
+   "口譯與字幕（AI）",
+   "晚餐與點心"
   ],
   "sec_overall": "整體評價",
   "best_q": "最喜歡的場次",
@@ -243,14 +223,9 @@
   "comment_ph": "滿意或不足之處（選填）",
   "sec_program": "活動安排評分",
   "program": [
-   "整體時間及環節次序",
-   "休息時間安排",
-   "傳譯及字幕（AI傳譯）",
-   "講者簡報下載（QR網站）",
-   "場地、座位及音響",
-   "小食",
-   "晚宴",
-   "第二部 VIP NIGHT（DJ派對及交流）"
+   "活動時間與休息安排",
+   "傳譯與字幕（AI）",
+   "晚餐與小食"
   ],
   "sec_overall": "整體評價",
   "best_q": "最喜歡的環節",
@@ -299,14 +274,9 @@
   "comment_ph": "良かった点・改善してほしい点（任意）",
   "sec_program": "イベント構成の評価",
   "program": [
-   "全体の所要時間とセッションの順序",
-   "休憩時間の配分",
-   "通訳・字幕（AI通訳）",
-   "発表資料のダウンロード（QRサイト）",
-   "会場・座席・音響",
-   "スナック",
-   "ディナー",
-   "第2部 VIP NIGHT（DJパーティー・ネットワーキング）"
+   "進行時間と休憩の配分",
+   "通訳・字幕（AI）",
+   "ディナーと軽食"
   ],
   "sec_overall": "総合",
   "best_q": "最も良かったセッション",
@@ -355,14 +325,9 @@
   "comment_ph": "สิ่งที่ชอบหรือสิ่งที่อยากให้ปรับปรุง (ไม่บังคับ)",
   "sec_program": "ประเมินรูปแบบงาน",
   "program": [
-   "ระยะเวลาโดยรวมและลำดับเซสชัน",
-   "การจัดเวลาพัก",
-   "ล่ามและคำบรรยาย (ล่าม AI)",
-   "ดาวน์โหลดเอกสารนำเสนอ (เว็บไซต์ QR)",
-   "สถานที่ ที่นั่ง และระบบเสียง",
-   "ขนมว่าง",
-   "มื้อค่ำ",
-   "ภาค 2 VIP NIGHT (ปาร์ตี้ DJ และเครือข่าย)"
+   "เวลาดำเนินงานและการจัดเวลาพัก",
+   "การแปลและคำบรรยาย (AI)",
+   "อาหารค่ำและของว่าง"
   ],
   "sec_overall": "ภาพรวม",
   "best_q": "เซสชันที่ชอบที่สุด",
@@ -411,14 +376,9 @@
   "comment_ph": "Điều bạn thích hoặc cần cải thiện (không bắt buộc)",
   "sec_program": "Đánh giá chương trình",
   "program": [
-   "Tổng thời lượng và thứ tự các phiên",
-   "Phân bổ giờ nghỉ",
-   "Phiên dịch và phụ đề (phiên dịch AI)",
-   "Tải tài liệu trình bày (trang QR)",
-   "Địa điểm, chỗ ngồi và âm thanh",
-   "Đồ ăn nhẹ",
-   "Tiệc tối",
-   "Phần 2 VIP NIGHT (tiệc DJ và giao lưu)"
+   "Thời gian chương trình và giờ nghỉ",
+   "Phiên dịch và phụ đề (AI)",
+   "Bữa tối và đồ ăn nhẹ"
   ],
   "sec_overall": "Tổng thể",
   "best_q": "Phiên bạn thích nhất",
@@ -467,14 +427,9 @@
   "comment_ph": "Apa yang anda suka atau boleh dipertingkatkan (pilihan)",
   "sec_program": "Penilaian atur cara acara",
   "program": [
-   "Masa keseluruhan dan susunan sesi",
-   "Pembahagian masa rehat",
-   "Terjemahan dan sari kata (terjemahan AI)",
-   "Muat turun slaid (laman QR)",
-   "Tempat, tempat duduk dan bunyi",
-   "Snek",
-   "Makan malam",
-   "Bahagian 2 VIP NIGHT (parti DJ dan rangkaian hubungan)"
+   "Masa program dan waktu rehat",
+   "Terjemahan dan sari kata (AI)",
+   "Makan malam dan snek"
   ],
   "sec_overall": "Keseluruhan",
   "best_q": "Sesi kegemaran anda",
@@ -523,14 +478,9 @@
   "comment_ph": "Lo que le gustó o lo que se podría mejorar (opcional)",
   "sec_program": "Programa del evento",
   "program": [
-   "Duración total y orden de las sesiones",
-   "Tiempos de descanso",
-   "Interpretación y subtítulos (IA)",
-   "Descarga de presentaciones (sitio QR)",
-   "Lugar, asientos y sonido",
-   "Aperitivos",
-   "Cena",
-   "Parte 2 VIP NIGHT (fiesta con DJ y networking)"
+   "Horarios y pausas",
+   "Interpretación y subtítulos (AI)",
+   "Cena y snacks"
   ],
   "sec_overall": "General",
   "best_q": "Su sesión favorita",
