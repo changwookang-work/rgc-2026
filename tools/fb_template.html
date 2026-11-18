@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#141414">
+<title>RENADOG GLOBAL CONNECT 2026 · Feedback</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(/assets/fonts/poppins-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:500;src:url(/assets/fonts/poppins-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:600;src:url(/assets/fonts/poppins-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;src:url(/assets/fonts/instrument-serif-latin-400-italic.woff2) format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:normal;src:url(/assets/fonts/instrument-serif-latin-400-normal.woff2) format('woff2')}
+/*VIFONTS*/
+:root{--bg:#141414;--line:rgba(255,255,255,.12);--muted:#A8A8A8;--accent:#EC7969}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:#fff}
+body{font-family:Poppins,'Noto Sans KR','Noto Sans JP','Noto Sans SC','Noto Sans TC','Noto Sans Thai','Apple SD Gothic Neo','Hiragino Sans','PingFang SC','PingFang TC',sans-serif;
+  -webkit-font-smoothing:antialiased;min-height:100vh;background:radial-gradient(120% 70% at 85% 0%,#262626 0%,#141414 60%) fixed}
+:lang(vi) .wrap :not(em):not(.mono){font-family:'Be Vietnam Pro',sans-serif!important}
+.wrap{max-width:560px;margin:0 auto;padding:28px 22px 64px}
+header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:30px}
+header>div{flex:none}
+.mono{width:40px;height:40px;border:1.4px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font:400 25px/1 'Instrument Serif',serif;padding-top:2px}
+.wm{display:block;width:100%;max-width:290px;height:auto;min-width:0;opacity:.95}
+.eyebrow{font-size:11px;font-weight:500;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+h1{font-size:28px;font-weight:600;line-height:1.22;margin:10px 0 0;word-break:keep-all}
+h1 em{font:italic 400 34px/1 'Instrument Serif',serif;color:var(--accent)}
+.rule{width:44px;height:2px;background:var(--accent);margin:18px 0 18px}
+.anon{border:1px solid rgba(236,121,105,.5);background:rgba(236,121,105,.08);padding:14px 16px;font-size:13.5px;line-height:1.6;color:#E8E8E8;border-radius:2px}
+.anon b{color:var(--accent)}
+.multi{color:var(--muted);font-size:13px;line-height:1.7;margin-bottom:22px}
+.langs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lang{min-height:58px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#fff;font:inherit;font-size:16px;font-weight:500;border-radius:2px;cursor:pointer}
+.lang[data-l=vi]{font-family:'Be Vietnam Pro',sans-serif}
+.lang:active,.lang:hover{border-color:var(--accent)}
+.sec{margin:34px 0 4px;font-size:13px;font-weight:600;letter-spacing:.14em;color:var(--accent);text-transform:uppercase}
+.card{border-top:1px solid var(--line);padding:18px 0 20px}
+.time{font-size:12px;letter-spacing:.1em;color:var(--muted)}
+.st{font-size:16.5px;font-weight:600;line-height:1.4;margin:5px 0 3px;word-break:keep-all;overflow-wrap:anywhere}
+.sp{color:#BDBDBD;font-size:13px;margin-bottom:10px}
+.q{font-size:14px;color:#DADADA;margin:12px 0 7px;line-height:1.4}
+.q small{color:var(--muted);font-size:12px}
+.scale{display:flex;gap:6px}
+.scale button{flex:1;height:44px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#fff;font:inherit;font-size:16px;font-weight:600;border-radius:2px;cursor:pointer}
+.scale button.on{background:#fff;color:#141414;border-color:#fff}
+.scale button.na{flex:1.8;font-size:12px;font-weight:500;color:#BDBDBD}
+.scale button.na.on{background:#555;color:#fff;border-color:#555}
+.ends{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:5px}
+textarea{width:100%;min-height:70px;margin-top:10px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:#fff;font:inherit;font-size:15px;line-height:1.5;padding:11px 12px;border-radius:2px;resize:vertical}
+textarea:focus{outline:none;border-color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{padding:10px 13px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:#fff;font:inherit;font-size:14px;border-radius:2px;cursor:pointer;text-align:left}
+.chips button.on{background:#fff;color:#141414;border-color:#fff}
+.chips.col{flex-direction:column}
+.prog{display:flex;flex-direction:column;gap:2px}
+.submit{width:100%;margin-top:30px;padding:17px;background:var(--accent);color:#141414;border:0;font:inherit;font-size:16px;font-weight:600;border-radius:2px;cursor:pointer}
+.submit:disabled{opacity:.6}
+.msg{color:var(--accent);font-size:14px;margin-top:12px;min-height:20px}
+.foot{margin-top:26px;display:flex;justify-content:flex-end}
+.chg{background:none;border:1px solid var(--line);color:#fff;padding:10px 14px;font:inherit;font-size:13px;border-radius:2px;cursor:pointer}
+.center{min-height:70vh;display:flex;flex-direction:column;justify-content:center}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+var D=/*DATA*/;
+var CLOSE=Date.parse('2026-11-19T00:00:00+09:00');
+var API='https://emwzlodaabbbyshqjrtn.supabase.co/rest/v1/rgc2026_feedback';
+var KEY='sb_publishable_oUNo4aQkADxH6-73j6IyNg_-vXPo4Wh';
+var app=document.getElementById('app');
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function head(){return '<header><div class="mono">R</div><img class="wm" src="/assets/wordmark.png" alt="RENADOG GLOBAL CONNECT 2026"></header>'}
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function center(t,b){app.innerHTML=head()+'<div class="center"><div class="eyebrow">RENADOG GLOBAL CONNECT 2026</div><h1>'+esc(t)+'</h1><div class="rule"></div><p class="multi">'+esc(b||'')+'</p></div>'}
+function picker(){
+  document.documentElement.lang='en';
+  var h=head()+'<div class="eyebrow">Feedback · 18 Nov 2026</div><h1>Choose your <em>language</em></h1><div class="rule"></div><p class="multi">'+
+    D.order.map(function(c){return D.F[c].choose}).filter(function(v,i,a){return a.indexOf(v)===i}).map(esc).join(' · ')+'</p><div class="langs">';
+  D.order.forEach(function(c){h+='<button class="lang" data-l="'+c+'">'+esc(D.S[c].name)+'</button>'});
+  app.innerHTML=h+'</div>';
+  app.querySelectorAll('.lang').forEach(function(b){b.onclick=function(){history.pushState({},'','?lang='+b.getAttribute('data-l'));form(b.getAttribute('data-l'));window.scrollTo(0,0)}});
+}
+function scale(name,na){
+  var h='<div class="scale" data-n="'+name+'">';
+  for(var i=1;i<=5;i++)h+='<button type="button" data-v="'+i+'">'+i+'</button>';
+  if(na)h+='<button type="button" class="na" data-v="0">'+esc(na)+'</button>';
+  return h+'</div>';
+}
+var A;
+function form(l){
+  if(Date.now()>=CLOSE){center(D.F[l]?D.F[l].closed:D.F.en.closed);return}
+  var F=D.F[l],S=D.S[l]; if(!F){picker();return}
+  document.documentElement.lang=S.html;
+  if(ls('rgc_fb_done')){center(F.done_title,F.already);return}
+  A={role:null,s:{},p:{},best:null,again:null,overall:null};
+  var ends='<div class="ends"><span>1 · '+esc(F.low)+'</span><span>5 · '+esc(F.high)+'</span></div>';
+  var h=head()+'<div class="eyebrow">'+esc(F.eyebrow)+'</div><h1>'+esc(F.title)+'</h1><div class="rule"></div><div class="anon"><b>🔒</b> '+esc(F.anon)+'</div>';
+  h+='<div class="q" style="margin-top:22px">'+esc(F.role_q)+'</div><div class="chips" data-c="role">'+F.roles.map(function(r,i){return '<button type="button" data-v="'+i+'">'+esc(r)+'</button>'}).join('')+'</div>';
+  h+='<div class="sec">'+esc(F.sec_sessions)+'</div>';
+  D.sessions.forEach(function(s,i){
+    var sp=s.deck==='panel'?esc(S.panelSp):esc(s.sp)+(s.org?' · '+esc(s.org):'');
+    h+='<div class="card"><div class="time">'+s.time+'</div><div class="st">'+esc(S.s[i])+'</div><div class="sp">'+sp+'</div>'+
+      '<div class="q">'+esc(F.sat_q)+'</div>'+scale('s_'+s.deck+'_sat',F.na)+ends+
+      '<div class="q">'+esc(F.use_q)+'</div>'+scale('s_'+s.deck+'_use')+
+      '<textarea data-t="s_'+s.deck+'_c" maxlength="1000" placeholder="'+esc(F.comment_ph)+'"></textarea></div>';
+  });
+  h+='<div class="sec">'+esc(F.sec_program)+'</div>';
+  F.program.forEach(function(p,i){h+='<div class="card"><div class="q" style="margin-top:0">'+esc(p)+'</div>'+scale('p_'+D.progKeys[i])+'</div>'});
+  h+='<div class="card"><div class="q" style="margin-top:0">'+esc(F.sugg_q)+' <small>('+esc(F.optional)+')</small></div><textarea data-t="suggest_program" maxlength="2000" placeholder="'+esc(F.text_ph)+'"></textarea></div>';
+  h+='<div class="sec">'+esc(F.sec_overall)+'</div>';
+  h+='<div class="card"><div class="q" style="margin-top:0">'+esc(F.best_q)+'</div><div class="chips col" data-c="best">'+D.sessions.map(function(s,i){return '<button type="button" data-v="'+s.deck+'">'+s.time.slice(0,5)+' · '+esc(S.s[i])+'</button>'}).join('')+'</div></div>';
+  h+='<div class="card"><div class="q" style="margin-top:0">'+esc(F.worst_q)+'</div><textarea data-t="worst" maxlength="2000" placeholder="'+esc(F.text_ph)+'"></textarea></div>';
+  h+='<div class="card"><div class="q" style="margin-top:0">'+esc(F.next_q)+'</div><textarea data-t="next" maxlength="2000" placeholder="'+esc(F.text_ph)+'"></textarea></div>';
+  h+='<div class="card"><div class="q" style="margin-top:0">'+esc(F.overall_q)+'</div>'+scale('overall')+ends+'</div>';
+  h+='<div class="card"><div class="q" style="margin-top:0">'+esc(F.again_q)+'</div><div class="chips" data-c="again">'+F.again.map(function(r,i){return '<button type="button" data-v="'+i+'">'+esc(r)+'</button>'}).join('')+'</div></div>';
+  h+='<button class="submit" id="sub">'+esc(F.submit)+'</button><div class="msg" id="msg"></div>';
+  h+='<div class="foot"><button class="chg" id="chg">'+esc(F.change)+'</button></div>';
+  app.innerHTML=h;
+  app.querySelectorAll('.scale').forEach(function(sc){sc.querySelectorAll('button').forEach(function(b){b.onclick=function(){
+    sc.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');A.p[sc.getAttribute('data-n')]=+b.getAttribute('data-v')}})});
+  app.querySelectorAll('.chips').forEach(function(ch){ch.querySelectorAll('button').forEach(function(b){b.onclick=function(){
+    var on=b.classList.contains('on');ch.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+    if(!on)b.classList.add('on');A[ch.getAttribute('data-c')]=on?null:b.getAttribute('data-v')}})});
+  document.getElementById('chg').onclick=function(){history.pushState({},'','/feedback/');picker();window.scrollTo(0,0)};
+  document.getElementById('sub').onclick=function(){submit(l)};
+}
+function submit(l){
+  var F=D.F[l],msg=document.getElementById('msg'),btn=document.getElementById('sub');
+  if(!A.p.overall){msg.textContent=F.need;return}
+  var ans={role:A.role===null?null:+A.role,scores:A.p,best:A.best,again:A.again===null?null:+A.again,text:{}};
+  app.querySelectorAll('textarea').forEach(function(t){var v=t.value.trim();if(v)ans.text[t.getAttribute('data-t')]=v.slice(0,2000)});
+  btn.disabled=true;btn.textContent=F.sending;msg.textContent='';
+  fetch(API,{method:'POST',credentials:'omit',referrerPolicy:'no-referrer',headers:{'apikey':KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify({lang:l,answers:ans})})
+  .then(function(r){if(!r.ok)throw 0;ls('rgc_fb_done','1');center(F.done_title,F.done_body);window.scrollTo(0,0)})
+  .catch(function(){btn.disabled=false;btn.textContent=F.submit;msg.textContent=F.err});
+}
+function start(){
+  var m=location.search.match(/[?&]lang=([\w-]+)/);
+  if(Date.now()>=CLOSE){center(D.F.en.closed);return}
+  if(m&&D.F[m[1]]){form(m[1]);return}
+  picker();
+}
+window.onpopstate=start;start();
+</script>
+</body>
+</html>

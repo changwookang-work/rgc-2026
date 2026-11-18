@@ -5,6 +5,7 @@ export const config = { matcher: '/:path*' };
 
 const NEW_HOST = 'renadog-global-connect-2026.vercel.app';
 const CUTOFF = Date.parse('2026-11-18T19:00:00+09:00');
+const FEEDBACK_CUTOFF = Date.parse('2026-11-19T00:00:00+09:00'); // feedback survey stays open until 23:59 KST
 
 const THANK_YOU = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
@@ -31,7 +32,9 @@ export default function middleware(request) {
   if (url.hostname.startsWith('rgc-2026') && url.hostname.endsWith('.vercel.app')) {
     return Response.redirect('https://' + NEW_HOST + url.pathname + url.search, 307);
   }
-  if (Date.now() >= CUTOFF && !isAsset) {
+  const isFeedback = url.pathname === '/feedback' || url.pathname.startsWith('/feedback/');
+  const cutoff = isFeedback ? FEEDBACK_CUTOFF : CUTOFF;
+  if (Date.now() >= cutoff && !isAsset) {
     return new Response(THANK_YOU, {
       status: 200,
       headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' },
